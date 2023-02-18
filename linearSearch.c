@@ -14,18 +14,22 @@ int linearSearch(int a[], int n, int key)
 }
 int main()
 {
-    int n, key;
-    printf("Enter size of array: ");
-    scanf("%d", &n);
-    printf("Enter array elements: ");
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-    printf("Enter key: ");
-    scanf("%d", &key);
-    int ind = linearSearch(arr, n, key);
-    if (ind > 0)
-        printf("Present %d\n", ind + 1);
-    else
-        printf("Not Present %d\n", n);
+    int n, key, t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        printf("Enter size of array: ");
+        scanf("%d", &n);
+        printf("Enter array elements: ");
+        int arr[n];
+        for (int i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+        printf("Enter key: ");
+        scanf("%d", &key);
+        int ind = linearSearch(arr, n, key);
+        if (ind > 0)
+            printf("Present %d\n", ind + 1);
+        else
+            printf("Not Present %d\n", n);
+    }
 }
