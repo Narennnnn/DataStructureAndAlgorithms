@@ -17,7 +17,7 @@ int main()
             a[i] = x;
             s.insert(x);
         }
-        cout << "key to be search is:";
+        cout << "key is:";
         cin >> k;
         for (int i = 0; i < n; i++)
         {
