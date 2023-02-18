@@ -23,14 +23,18 @@ void binarySearch(int a[], int l, int h, int key)
 }
 int main()
 {
-    int n, key;
-    printf("Enter size of array: ");
-    scanf("%d", &n);
-    printf("Enter array elements in sorted order: ");
-    int arr[n];
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-    printf("Enter key: ");
-    scanf("%d", &key);
-    binarySearch(arr, 0, n - 1, key);
+    int n, key, t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        printf("Enter size of array: ");
+        scanf("%d", &n);
+        printf("Enter array elements in sorted order: ");
+        int arr[n];
+        for (int i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+        printf("Enter key: ");
+        scanf("%d", &key);
+        binarySearch(arr, 0, n - 1, key);
+    }
 }

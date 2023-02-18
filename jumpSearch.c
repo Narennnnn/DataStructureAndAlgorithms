@@ -25,15 +25,19 @@ void jumpSearch(int a[], int n, int k)
 
 int main()
 {
-    int n;
-    printf("Enter size of array:");
-    scanf("%d", &n);
-    int arr[n];
-    printf("Enter elements: ");
-    for (int i = 0; i < n; i++)
-        scanf("%d", &arr[i]);
-    int key;
-    printf("Enter key to search:");
-    scanf("%d", &key);
-    jumpSearch(arr, n, key);
+    int n, t;
+    scanf("%d", &t);
+    while (t--)
+    {
+        printf("Enter size of array:");
+        scanf("%d", &n);
+        int arr[n];
+        printf("Enter elements: ");
+        for (int i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+        int key;
+        printf("Enter key to search:");
+        scanf("%d", &key);
+        jumpSearch(arr, n, key);
+    }
 }
