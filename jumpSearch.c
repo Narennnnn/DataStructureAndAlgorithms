@@ -1,28 +1,26 @@
 #include <stdio.h>
 #include <math.h>
-int jumpSearch(int a[], int n, int k)
+void jumpSearch(int a[], int n, int k)
 {
-    int flag = 0, i;
-    int end = sqrt(n);
-    for (i = 0; i < n; i += end)
+    int i, low = 0, jump = sqrt(n), high = jump, comp = 1, flag = 0;
+    while (k >= a[high] && high < n)
     {
-        if (a[i] > k)
-            break;
+        comp++;
+        low = high;
+        high += jump;
     }
-    if (i >= n)
-        i = n - 1;
-    for (; a[i] >= k; i--)
+    if (high > n - 1)
+        high = n;
+    for (i = low; i < high; i++)
     {
         if (a[i] == k)
         {
-            return i;
+            printf("Present %d\n", comp);
             flag = 1;
         }
     }
-    if (a[i] < k && flag == 0)
-    {
-        return -1;
-    }
+    if (flag == 0)
+        printf("Not Present %d", comp + 1);
 }
 
 int main()
@@ -37,9 +35,5 @@ int main()
     int key;
     printf("Enter key to search:");
     scanf("%d", &key);
-    int index = jumpSearch(arr, n, key);
-    if (index >= 0)
-        printf("Found at %d index!", index);
-    else
-        printf("Not found");
+    jumpSearch(arr, n, key);
 }
