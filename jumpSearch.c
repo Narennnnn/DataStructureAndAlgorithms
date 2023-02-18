@@ -41,5 +41,5 @@ int main()
     if (index >= 0)
         printf("Found at %d index!", index);
     else
-        printf("Not found!!");
+        printf("Not found");
 }
