@@ -18,7 +18,7 @@ bool bfs(int adjM[5][5], int source)
                 color[i] = (color[curr] == 'r') ? 'b' : 'r';
                 q.push(i);
             }
-            if (color[curr] == color[i])
+            if (color[curr] == color[i]) // if adjacent node is of same color then not bipartite
                 return false;
         }
     }
